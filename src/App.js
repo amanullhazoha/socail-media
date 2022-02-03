@@ -1,25 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Navbar from "./components/navbar.component";
+import Login from "./components/login.component";
+import Posts from "./components/posts.component";
+import { AuthProvider } from "./contexts/authContext";
+import PublicRoute from "./components/common/publicRoute.component";
+import PrivateRoute from "./components/common/privateRoute.component";
+import Layout from "./components/layout.component";
+
+const App = () => {
+    return (
+        <AuthProvider>
+            <Navbar />
+            <Layout>
+                <Switch>
+                    <Route
+                        exact
+                        path="/login"
+                        render={(props) => (
+                            <PublicRoute>
+                                <Login {...props} />
+                            </PublicRoute>
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/users"
+                        render={(props) => (
+                            <PrivateRoute>
+                                <h1 {...props}>This is users.</h1>
+                            </PrivateRoute>
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/albums"
+                        render={(props) => (
+                            <PrivateRoute>
+                                <h1 {...props}>This is albums.</h1>
+                            </PrivateRoute>
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/gallery"
+                        render={(props) => (
+                            <PrivateRoute>
+                                <h1 {...props}>This is gallery.</h1>
+                            </PrivateRoute>
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/"
+                        render={(props) => (
+                            <PrivateRoute>
+                                <Posts />
+                            </PrivateRoute>
+                        )}
+                    />
+                </Switch>
+            </Layout>
+        </AuthProvider>
+    );
+};
 
 export default App;

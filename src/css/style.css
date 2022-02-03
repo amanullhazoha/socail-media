@@ -1,0 +1,154 @@
+body{
+    background: #F0F2F5;
+}
+
+h1{
+    font-size: 36px;
+    color: #0B86EE;
+}
+
+#header{
+    background: #ffffff;
+    margin-bottom: 15px;
+}
+
+#header button{
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0 5px;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#header b{
+    text-transform: capitalize;
+    color: #0B86EE;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.posts{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.posts .btn-primary{
+    margin-bottom: 15px;
+}
+
+.card{
+    width: 400px;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+}
+
+.card .card-title{
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+.card .date{
+    background: #F0F2F5;
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: 14px;
+}
+
+.card input{
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.card button{
+    float: right;
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0 5px;
+}
+
+.card button i{
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.card button span{
+    margin-left: 5px;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.card .addPost button{
+    display: block;
+    width: 100%;
+    background: #F0F2F5;
+    color: #000;
+    font-size: 17px;
+    border-radius: 50px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    padding: 3px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card .addPost button:hover{
+    background: rgba(236, 227, 227, 0.7);
+}
+
+.card .addPost .user{
+    font-size: 25px;
+}
+
+.card .addPost .user b{
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.comment{
+    background: #F0F2F5;
+    border-radius: 7px;
+    margin: 10px 30px 0 10px ;
+    padding: 10px;
+}
+
+.comment p{
+    margin-bottom: 0;
+}
+
+.login{
+    background: #fff;
+    margin-top: 130px;
+    margin-bottom: 130px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 
+                0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.login .form-control{
+    margin-top: 15px;
+}
+
+.login .error{
+    color: #ff0000;
+}
+
+.login .btn{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+#postModal{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#postModal .modal-dialog{
+    margin: 10rem auto;
+}
